@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+//var argv = program;
+var argv = require('optimist').argv;
+
+program
+    .version('0.1.4')
+    .usage('[options]')
+    .description('if - 接口工具')
+    .option('-i, --init [projectRoot]', '接口环境初始化')
+    .option('-s, --sync [configFilePath]', '接口文档同步')
+    .option('-e, --server [projectRoot]', '启动接口服务器')
+    .option('-p, --port [port]', '接口服务器端口')
+    .parse(process.argv);
+
+require('../commands/if.js').exec(argv);
+
