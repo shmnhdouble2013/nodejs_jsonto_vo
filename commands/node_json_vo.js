@@ -1,8 +1,12 @@
+
 var url = require('url'),
     Modules = require('Modules'),
     path = require('path'),
+	// 编码系统
     punycode = require('punycode'),
-    // process = require('process'), 
+	
+	// 子进程
+    process = require('child_process'), 
     fs = require('fs'),
     fs = require('fs'),
     fs = require('fs');
@@ -13,3 +17,5 @@ var url = require('url'),
 exports.area = function (r) {
     return PI * r * r;
 };
+
+process.
